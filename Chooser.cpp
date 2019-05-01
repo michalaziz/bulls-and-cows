@@ -8,3 +8,4 @@ string bullpgia ::Chooser::choose(uint length)
 {
     return "";
 }
+

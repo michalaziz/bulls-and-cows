@@ -24,13 +24,13 @@ namespace bullpgia {
 			string guess = guesser.guess();
 			if (guess.length()!=length)  // Illegal guess
 				return TECHNICAL_VICTORY_TO_CHOOSER;
-			if (guess==choice) {
-				return indexOfTurn + 1; 
+			if (guess==choice) {//end of the game
+				return indexOfTurn + 1; //print the number of turns until the win 
 			} else {
-				auto reply = calculateBullAndPgia(choice, guess);
+				auto reply = calculateBullAndPgia(choice, guess);//the game is on 
 				guesser.learn(reply); // tell the guesser how many bull and pgia were in its latest guess
 			}
 		}
-		return TECHNICAL_VICTORY_TO_CHOOSER;  // Guesser could not guess in time
+		return TECHNICAL_VICTORY_TO_CHOOSER;  // Guesser could not guess in time//pass the max turn 
 	}
 }
