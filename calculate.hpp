@@ -6,5 +6,6 @@ using std::string;
 namespace bullpgia
 {
 
+int len (string);
 string calculateBullAndPgia(string , string );
 }
