@@ -6,18 +6,18 @@
 string bullpgia::calculateBullAndPgia(string choice, string guess)
 {
     int c = 0, bull = 0, pgia = 0;
-    if (choice == guess)
+    if (choice.compare(guess)==0)
 
-        return std::to_string(choice.length) + " bull 0 pgia";
+        return std::to_string(choice.length()) + " bull 0 pgia";
 
     else
     {
-        while (c < choice.length)
+        while (c < choice.length())
         {
             if (choice[c] == guess[c])
                 bull++;
             else
-                for (int i = 0; i < guess.length; i++)
+                for (int i = 0; i < guess.length(); i++)
                 {
                     if (guess[i] == choice[c])
                         pgia++;
