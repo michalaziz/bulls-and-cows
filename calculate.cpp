@@ -1,14 +1,15 @@
-
 #include "calculate.hpp"
 #include <string>
-#include <iostream>
+#include "iostream"
+using namespace std;
+namespace bullpgia{
 
-string bullpgia::calculateBullAndPgia(string choice, string guess)
+string calculateBullAndPgia(string choice, string guess)
 {
     int c = 0, bull = 0, pgia = 0;
     if (choice.compare(guess)==0)
 
-        return std::to_string(choice.length()) + " bull 0 pgia";
+        return to_string(choice.length()) + "," + to_string(0)  ;
 
     else
     {
@@ -25,5 +26,6 @@ string bullpgia::calculateBullAndPgia(string choice, string guess)
             c++;
         }
     }
-    return std::to_string(bull) + " bull" + std::to_string(pgia) + " pgia";
+    return to_string(bull) + "," + to_string(pgia) ;
+}
 }
