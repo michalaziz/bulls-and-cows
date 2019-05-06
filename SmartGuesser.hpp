@@ -9,15 +9,15 @@ namespace bullpgia
 class SmartGuesser : public bullpgia::Guesser
 {
 private:
-  list<string> combination;
-  string temp;
+  list<std::string> combination;
+  std::string temp;
 
 public:
   string guess() override;
-  void learn(string);
-  void startNewGame(uint);
+  void learn(string result)override;
+  void startNewGame(uint length)override;
   void newList();
-  void removeComb(string);
+  void removeComb(string result);
 };
 
 } // namespace bullpgia

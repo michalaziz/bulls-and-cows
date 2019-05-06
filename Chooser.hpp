@@ -10,6 +10,6 @@ namespace bullpgia
     {
     public:
 
-        virtual string choose(uint)=0;//pure virtual 
+        virtual string choose(uint length)=0;//pure virtual 
     };
 }
